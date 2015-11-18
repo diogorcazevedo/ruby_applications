@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Urgent Tasks</h1>
+
+
+<%= render @tasks  %>
+
+<%= will_paginate @tasks %>
+<br />
+
+<%= link_to 'Listar todas as tarefas', tasks_path %>

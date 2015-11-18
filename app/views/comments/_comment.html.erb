@@ -1,0 +1,6 @@
+<h5><%= comment.name %></h5>
+<%= simple_format comment.content %>
+Criado há: <%= time_ago_in_words comment.created_at %>
+<br />
+<br />
+<%= link_to "Remover", comment_path(comment), method: :delete, confirm: "Vc tem certeza que deseja remover?" %>

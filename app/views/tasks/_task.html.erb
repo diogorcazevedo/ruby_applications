@@ -1,0 +1,12 @@
+
+        <h3><%= task.name %><% if task.urgent %><i> <b>Urgente</b> </i><% end %></h3>
+        
+        <%= simple_format task.description %>
+        <%= pluralize(task.comments.size, "comment" )%>
+
+
+        <p>
+        <%= link_to 'Show', task %>
+        <%= link_to 'Edit', edit_task_path(task) %>
+        <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </p>
